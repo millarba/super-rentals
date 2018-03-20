@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
-import { visit, currentURL, andThen } from '@ember/test-helpers';
+import { visit, currentURL, click } from '@ember/test-helpers';
 
 module('Acceptance | my acceptance test', function(hooks) {
   setupApplicationTest(hooks);
@@ -10,8 +10,9 @@ module('Acceptance | my acceptance test', function(hooks) {
   //   assert.equal(currentURL(), '/rentals');
   // });
 
-  test('should show rentals as the home page', function(assert) {
-
+  test('should show rentals as the home page', async function(assert) {
+    await visit('/');
+    assert.equal(currentURL(), '/rentals', 'should redirect automatically');
   });
 
   test('should link to information about the company', function(assert) {
