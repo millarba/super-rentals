@@ -29,7 +29,7 @@ module('Acceptance | my acceptance test', function(hooks) {
 
   test('should list available rentals', async function(assert) {
     await visit('/');
-    assert.equal(this.element.querySelectorAll('.listing'), 3, 'should display 3 listings');
+    assert.equal(this.element.querySelectorAll('.listing').length, 3, 'should display 3 listings');
   });
 
   test('should filter the list of rentals by city', async function(assert) {
