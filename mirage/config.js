@@ -2,8 +2,9 @@ export default function() {
   this.namespace = '/api';
 
   this.get('/rentals', function() {
-    return{
+    return {
       data: [{
+          type: 'rentals',
           id: 'grand-old-mansion',
           title: 'Grand Old Mansion',
           owner: 'Veruca Salt',
@@ -13,6 +14,7 @@ export default function() {
           image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
           description: 'This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.'
         }, {
+          type: 'rentals',
           id: 'urban-living',
           title: 'Urban Living',
           owner: 'Mike TV',
@@ -22,6 +24,7 @@ export default function() {
           image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg',
           description: 'A commuters dream. This rental is within walking distance of 2 bus stops and the Metro.'
         }, {
+          type: 'rentals',
           id: 'downtown-charm',
           title: 'Downtown Charm',
           owner: 'Violet Beauregarde',
