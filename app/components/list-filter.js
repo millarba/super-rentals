@@ -16,4 +16,5 @@ export default Component.extend({
       filterAction(filterInputValue).then((filterResults) => this.set('results', filterResults));
     }
   }
+
 });
